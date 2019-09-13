@@ -2,12 +2,16 @@ package com.kellton.Plants.Entity;
 
 import java.io.Serializable;
 
-import javax.persistence.Id;
-
+import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 
-@Document(indexName = "mobileDetails-index")
+@Document(indexName = "mobileDetails-index",type = "mobileDetails")
 public class MobileDetailsES implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	private String mobileId;
 
